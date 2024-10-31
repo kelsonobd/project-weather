@@ -1,0 +1,97 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} 
+
+.title {
+  font-size: 50px;
+  color: #464343;
+  text-shadow: 1px 1px 0px #000000, -1px -1px 0px #333, 1px -1px 0px #333,
+    -1px 1px 0px #333;
+  animation: flipTitle 2s;
+}
+
+/* efeito */
+@keyframes flipTitle {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.containerInput {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  margin: 34px 0;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.containerInput input{
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    color: #000;
+    outline: none;
+    margin-right: 8px;
+}
+
+.containerInput input::placeholder{
+    color:#7c7777
+}
+
+.buttonSearch{
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    transition: transform 0.5s;
+}
+
+.buttonSearch:hover {
+    transform: scale(1.2);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    border-radius: 8px;
+}
+
+.main h2{
+    margin: 10px 0;
+    font-size: 39px;
+}
+
+.main .mainCelsius{
+    font-size: 35px;
+}
+.main .mainTemp{
+    font-size: 20px;
+    text-transform: capitalize;
+
+}
+
+.main .mainMaxMin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px; 
+}
+.main .mainMaxMin span{
+    font-size: 18px;
+}
